@@ -10,16 +10,276 @@
 </head>
 
 <body>
-    <header></header>
     
-    <nav></nav>
+    <header class="navbar"id="navbar">
+        <div class="container navbar-inner">
+
+            <a href="index.html"class="logo">AfriConnect <span>Summit</span></a>
+
+    
+    <nav class="nav-links" id="navlinks">
+
+        <a href="index.html" class="active">Accueil</a>
+          <a href="programme.html" >programme</a>
+            <a href="intervenants.html">Intervenants</a>
+              <a href="contact.html">Contact</a>
+
+    </nav>
+    <div class="nav-buttons">
+        <!--Bouton dark/light mode-->
+        <button id="themeBtn" aria-label="changer de theme">
+            <i class="bi bi-moon-stars"></i>
+        </button>
+        <!--Bouton menu mobile(humburger)-->
+        <button id="themeBtn" aria-label="ouvrir le menu">
+             <i class="bi bi-list"></i>
+        </button>
+
+
+    </div>
+    </div>
+    
+    </header>
+
+    <!--Banniere Interne-->
 
     <main>
-        <section></section>
-        <section></section>
+        <section class="hero-interne">
+            <div class="container">
+                <h1>Programme du sommet</h1>
+                <p class="breadcrumb">
+                    <a href="index.html">Acceuil</a> Programme
+                </p>
+            </div>
+
+        </section>
+
+        <!--Onglets 3 jours-->
+        <section>
+            <div class="container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-day="1">Jour 1 . 12Nov</button>
+                    <button class="tab-btn active" data-day="2">Jour 2 . 13Nov</button>
+                    <button class="tab-btn active" data-day="3">Jour 3 . 14Nov</button>
+                </div>
+
+                <!--Planning Jour 1-->
+                <div class="day-panel active" data-day="1">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Heure</th>
+                                 <th>Session</th>
+                                  <th>Intervenant</th>
+                                   <th>Salle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>09:00</td>
+                                 <td>Ouverture officiel</td>
+                                  <td>Aita Ndoye</td>
+                                   <td> Grande Salle</td>
+                            </tr>
+                            <tr>
+                                <td>10:00</td>
+                                 <td>L'IA au service de l afrique</td>
+                                  <td>Therez Gbaguidi</td>
+                                   <td> Salle A</td>
+                            </tr>
+                            <tr>
+                                <td>11:30</td>
+                                 <td>Panel Fintech</td>
+                                  <td>Fanta Nunaiz</td>
+                                   <td> Salle B</td>
+                            </tr>
+                            <tr>
+                                <td>14:00</td>
+                                 <td>Data ; prise de decision</td>
+                                  <td>Theodora Diouf</td>
+                                   <td> Salle A</td>
+                            </tr>
+                            <tr>
+                                <td>16:00</td>
+                                 <td>Atelier Machine</td>
+                                  <td>Rosalia Mendy</td>
+                                   <td> Salle </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <!--Planning Jour 2-->
+                <div class="day-panel active" data-day="1">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Heure</th>
+                                 <th>Session</th>
+                                  <th>Intervenant</th>
+                                   <th>Salle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>09:00</td>
+                                 <td>Lever des fonds en Afrique</td>
+                                  <td>Fatou Ndiaye</td>
+                                   <td> Grande Salle</td>
+                            </tr>
+                            <tr>
+                                <td>10:00</td>
+                                 <td>Design produit a impact</td>
+                                  <td>Viviane Chidid</td>
+                                   <td> Salle c</td>
+                            </tr>
+                            <tr>
+                                <td>11:30</td>
+                                 <td>HUgo panafricain</td>
+                                  <td>Hugo Sarr</td>
+                                   <td> Salle c</td>
+                            </tr>
+                            <tr>
+                                <td>14:00</td>
+                                 <td>Data Science appliquee</td>
+                                  <td>Fallou Diop</td>
+                                   <td> Salle A</td>
+                            </tr>
+                            <tr>
+                                <td>16:30</td>
+                                 <td>UX pour marches emergents</td>
+                                  <td>Mamanayo</td>
+                                   <td> Salle B</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            <!--Planning Jour 3-->
+                <div class="day-panel active" data-day="1">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Heure</th>
+                                 <th>Session</th>
+                                  <th>Intervenant</th>
+                                   <th>Salle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>09:00</td>
+                                 <td>Le futur de l'IA africaine</td>
+                                  <td>Seynabou Diop</td>
+                                   <td> Grande Salle</td>
+                            </tr>
+                            <tr>
+                                <td>10:00</td>
+                                 <td>Cas d'usage Data</td>
+                                  <td>Angela Gomis</td>
+                                   <td> Salle A</td>
+                            </tr>
+                            <tr>
+                                <td>11:30</td>
+                                 <td>Table investisseurs</td>
+                                  <td>Maty Ndiaye</td>
+                                   <td> Grande Salle</td>
+                            </tr>
+                            <tr>
+                                <td>14:00</td>
+                                 <td>Cloture ; perspectives</td>
+                                  <td>Jules Cesar</td>
+                                   <td> Salle A</td>
+                            </tr>
+                            <tr>
+                                <td>16:30</td>
+                                 <td>Ceremonie de Cloture</td>
+                                  <td>Equipe AfriConnect</td>
+                                   <td> Grande Salle</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+        <!--Thematique-->
+
+        <section>
+            <div class="container">
+                <h2 class="reveal">Nos 4 thematiques</h2>
+                <div class="thematics-grid">
+                    <article class="thematic-card reveal">
+                        <i class="bi bi-cpu"></i>
+                        <h3>Intelligence Artificielle</h3>
+                        <p>Les usages concrets de l'IA pour les entreprises africaines.</p>
+                    </article>
+
+                    <article class="thematic-card reveal">
+                        <i class="bi bi-cash-coin"></i>
+                        <h3>Intelligence Artificielle</h3>
+                        <p>Acces au financement et innovation dans les paiements.</p>
+                    </article>
+
+                    <article class="thematic-card reveal">
+                        <i class="bi bi-palette"></i>
+                        <h3>Design ; Produit</h3>
+                        <p>Concevoir des produits numeriques adaptes aux marches locaux.</p>
+                    </article>
+
+                    <article class="thematic-card reveal">
+                        <i class="bi bi-bar-chart-line"></i>
+                        <h3>Data ; Analytics</h3>
+                        <p>Exploiter la donnee pour prendre de meilleures decisions.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer></footer>
+    <!--Footer-->
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <p class="Logo">AfriConnect<span>Summit</span></p>
+                <p>Le sommet tech qui cpnnect l afrique</p>
+
+
+            </div>
+        </div>
+        <div>
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Acceuil</a></li>
+                 <li><a href="programme.html">Programme</a></li>
+                  <li><a href="intervenants.html">Intervenants</a></li>
+                   <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </div>
+        <div>
+            <h4>Suivez-nous</h4>
+            <div class="socials">
+                <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                 <a href="#" aria-label="Linkedin"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+
+        <p class="copyright">&copy <span id="year"></span>AfriConnect Summit</p>
+
+    
+
+    <!--Bouton retour en haut-->
+    <button id="backToTop" aria-label="Retour en haut">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    </footer>
 
     <!--JavaScript-->
     <script src="js/main.js"></script>

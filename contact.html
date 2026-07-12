@@ -10,20 +10,262 @@
 </head>
 
 <body>
-    <header></header>
     
-    <nav></nav>
+    <header class="navbar"id="navbar">
+        <div class="container navbar-inner">
+
+            <a href="index.html"class="logo">AfriConnect <span>Summit</span></a>
+
+    
+    <nav class="nav-links" id="navlinks">
+
+        <a href="index.html" class="active">Accueil</a>
+          <a href="programme.html" >programme</a>
+            <a href="intervenants.html">Intervenants</a>
+              <a href="contact.html">Contact</a>
+
+    </nav>
+    <div class="nav-buttons">
+        <!--Bouton dark/light mode-->
+        <button id="themeBtn" aria-label="changer de theme">
+            <i class="bi bi-moon-stars"></i>
+        </button>
+        <!--Bouton menu mobile(humburger)-->
+        <button id="themeBtn" aria-label="ouvrir le menu">
+             <i class="bi bi-list"></i>
+        </button>
+
+
+    </div>
+    </div>
+    
+    </header>
+
 
     <main>
-        <section></section>
-        <section>
-            <form>
+        <!-- ============================
+         BANNIÈRE INTERNE + FIL D'ARIANE
+         ============================ -->
+    <section class="hero-interne">
+      <div class="container">
+        <h1>Contact ; Inscription</h1>
+        <p class="breadcrumb">
+          <a href="index.html">Accueil</a>  Contact
+        </p>
+      </div>
+    </section>
 
-            </form>
+        <section>
+            <div class="container contact-grid">
+
+        <!-- Colonne gauche : formulaire -->
+        <div class="contact-form-col">
+          <h2>Inscrivez-vous au sommet</h2>
+
+          <!-- Message affiché après une soumission réussie -->
+          <div class="success-message" id="successMessage">
+            <i class="bi bi-check-circle"></i>
+            Votre inscription a bien été envoyée ! Nous vous recontacterons rapidement.
+          </div>
+            
+<form id="contactForm" novalidate>
+
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom et prénom">
+              <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="vous@exemple.com">
+              <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+221 77 000 00 00">
+              <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="participation">Type de participation</label>
+              <select id="participation" name="participation">
+                <option value="">-- Choisissez une option --</option>
+                <option value="participant">Participant</option>
+                <option value="intervenant">Intervenant</option>
+                <option value="sponsor">Sponsor</option>
+                <option value="presse">Presse / Média</option>
+                <option value="benevole">Bénévole</option>
+              </select>
+              <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="country">Pays</label>
+              <select id="country" name="country">
+                <option value="">-- Choisissez votre pays --</option>
+                <option value="senegal">Sénégal</option>
+                <option value="cote-ivoire">Côte d'Ivoire</option>
+                <option value="ghana">Ghana</option>
+                <option value="nigeria">Nigeria</option>
+                <option value="kenya">Kenya</option>
+                <option value="rwanda">Rwanda</option>
+                <option value="tunisie">Niger</option>
+                <option value="cameroun">Cameroun</option>
+  
+                <option value="afrique-sud">Afrique du Sud</option>
+               
+              </select>
+              <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message / Motivation</label>
+              <textarea id="message" name="message" placeholder="Dites-nous pourquoi vous souhaitez participer (20 caractères minimum)"></textarea>
+              <span class="error-message"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Envoyer mon inscription</button>
+          </form>
+        </div>
+
+          <!-- Colonne droite : informations pratiques -->
+        <div class="contact-info-col">
+          <div class="info-box">
+            <p><i class="bi bi-geo-alt"></i> Kigali Convention Centre, Rwanda</p>
+            <p><i class="bi bi-calendar-event"></i> 12–14 Novembre 2026</p>
+            <p><i class="bi bi-envelope"></i> contact@africonnectsummit.africa</p>
+            <p><i class="bi bi-telephone"></i> +250 78 000 00 00</p>
+          </div>
+        </div>
+
+      </div>
+            
         </section>
+         <!-- ============================
+         FAQ — ACCORDÉON EN CSS PUR
+         ============================ -->
+    <section>
+      <div class="container">
+        <h2>Questions fréquentes</h2>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <input type="checkbox" id="faq1" class="faq-toggle">
+            <label for="faq1" class="faq-question">
+              Comment puis-je m'inscrire au sommet ?
+              <i class="bi bi-chevron-down"></i>
+            </label>
+            <div class="faq-answer">
+              <p>Remplissez le formulaire ci-dessus en indiquant votre type de participation. Vous recevrez une confirmation par email sous 48h.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <input type="checkbox" id="faq2" class="faq-toggle">
+            <label for="faq2" class="faq-question">
+              Le sommet est-il accessible aux étudiants ?
+              <i class="bi bi-chevron-down"></i>
+            </label>
+            <div class="faq-answer">
+              <p>Oui, un tarif réduit est proposé aux étudiants sur présentation d'une carte étudiante valide.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <input type="checkbox" id="faq3" class="faq-toggle">
+            <label for="faq3" class="faq-question">
+              Les repas sont-ils inclus dans l'inscription ?
+              <i class="bi bi-chevron-down"></i>
+            </label>
+            <div class="faq-answer">
+              <p>Les pauses café et déjeuners des 3 jours sont inclus dans tous les types d'inscription.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <input type="checkbox" id="faq4" class="faq-toggle">
+            <label for="faq4" class="faq-question">
+              Puis-je obtenir un remboursement en cas d'annulation ?
+              <i class="bi bi-chevron-down"></i>
+            </label>
+            <div class="faq-answer">
+              <p>Un remboursement intégral est possible jusqu'à 30 jours avant l'événement, puis partiel jusqu'à 7 jours avant.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <input type="checkbox" id="faq5" class="faq-toggle">
+            <label for="faq5" class="faq-question">
+              Le sommet propose-t-il une traduction simultanée ?
+              <i class="bi bi-chevron-down"></i>
+            </label>
+            <div class="faq-answer">
+              <p>Oui, une traduction français / anglais est disponible en simultané dans la Grande Salle.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ============================
+             CARTE GOOGLE MAPS
+             ============================ -->
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.google.com/maps?q=Kigali+Convention+Centre,+Rwanda&output=embed"
+            title="Localisation du Kigali Convention Centre"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+      </div>
+    </section>
     </main>
 
-    <footer></footer>
+    <!--Footer-->
+
+    
+<footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <p class="Logo">AfriConnect<span>Summit</span></p>
+                <p>Le sommet tech qui cpnnect l afrique</p>
+
+
+            </div>
+        </div>
+        <div>
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Acceuil</a></li>
+                 <li><a href="programme.html">Programme</a></li>
+                  <li><a href="intervenants.html">Intervenants</a></li>
+                   <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </div>
+        <div>
+            <h4>Suivez-nous</h4>
+            <div class="socials">
+                <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                 <a href="#" aria-label="Linkedin"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+
+        <p class="copyright">&copy <span id="year"></span>AfriConnect Summit</p>
+
+    
+
+    <!--Bouton retour en haut-->
+    <button id="backToTop" aria-label="Retour en haut">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    </footer>
 
     <!--JavaScript-->
     <script src="js/main.js"></script>

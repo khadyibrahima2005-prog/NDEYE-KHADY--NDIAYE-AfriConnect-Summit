@@ -10,16 +10,178 @@
 </head>
 
 <body>
-    <header></header>
     
-    <nav></nav>
+        <header class="navbar"id="navbar">
+        <div class="container navbar-inner">
 
+            <a href="index.html"class="logo">AfriConnect <span>Summit</span></a>
+
+    
+    <nav class="nav-links" id="navlinks">
+
+        <a href="index.html" class="active">Accueil</a>
+          <a href="programme.html" >programme</a>
+            <a href="intervenants.html">Intervenants</a>
+              <a href="contact.html">Contact</a>
+
+    </nav>
+    <div class="nav-buttons">
+        <!--Bouton dark/light mode-->
+        <button id="themeBtn" aria-label="changer de theme">
+            <i class="bi bi-moon-stars"></i>
+        </button>
+        <!--Bouton menu mobile(humburger)-->
+        <button id="themeBtn" aria-label="ouvrir le menu">
+             <i class="bi bi-list"></i>
+        </button>
+
+
+    </div>
+    </div>
+    
+    </header>
+    
     <main>
-        <section></section>
-        <section></section>
+
+        <!--Banniere-->
+        <section class="hero-interne">
+            <div class="container">
+                <h1>Nos intervenants</h1>
+                <p class="breadcrumb">
+                    <a href="index.html">Acceuil</a> Intervenants
+                </p>
+            </div>
+
+        </section>
+        <!--Filtrage Dynanmique-->
+        <section>
+            <div class="container">
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="tous">Tous</button>
+                     <button class="filter-btn active" data-filter="ia-tech">IA</button>
+                      <button class="filter-btn active" data-filter="business">Business</button>
+                       <button class="filter-btn active" data-filter="design">Design</button>
+                        <button class="filter-btn active" data-filter="data">Data</button>
+                </div>
+
+                <!--Grille des 9 Intervenants-->
+                <div class="all-speakers-grid">
+
+                    <article class="speakers-card" data-category="ia-tech">
+                        <img src="images/istockphoto-1055408774-612x612.webp" alt="">
+                        <h3>Aita Ndoye</h3>
+                        <p>CEO AitaConsulting .Senegal</p>
+                        <span class="speaker-tag">Business</span>
+                    </article>
+
+                    <article class="speakers-card" data-category="ia-tech">
+                        <img src="images/istockphoto-1653368202-612x612.webp" alt="">
+                        <h3>Rosalia Mendy</h3>
+                        <p>Directeur IA .Cote d'Ivoire</p>
+                        <span class="speaker-tag">IA ; tech</span>
+                    </article>
+
+                    <article class="speakers-card" data-category="ia-tech">
+                        <img src="images/istockphoto-2099408907-612x612.webp" alt="">
+                        <h3>Jules Cesar</h3>
+                        <p>Investisseur .Ghana</p>
+                        <span class="speaker-tag">Business</span>
+                    </article>
+
+                    <article class="speakers-card" data-category="ia-tech">
+                        <img src="images/istockphoto-2200638451-612x612.webp" alt="">
+                        <h3>Hugo</h3>
+                        <p>Fondateur HugoConsulting .Niger</p>
+                        <span class="speaker-tag">Data</span>
+                    </article>
+
+                    <article class="speakers-card" data-category="ia-tech">
+                        <img src="images/istockphoto-2099403180-612x612.webp" alt="">
+                        <h3>Fanta Nunaiz</h3>
+                        <p>Ingenieur Machine Learning.Nigeria</p>
+                        <span class="speaker-tag">IA ; tech</span>
+                    </article>
+
+                    <article class="speakers-card" data-category="ia-tech">
+                        <img src="images/istockphoto-2170854794-612x612.webp" alt="">
+                        <h3>Viviane Chidid</h3>
+                        <p>Produit Designer .Kenya</p>
+                        <span class="speaker-tag">Design</span>
+                    </article>
+
+                    <article class="speakers-card" data-category="ia-tech">
+                        <img src="images/istockphoto-2099408907-612x612.webp" alt="">
+                        <h3>Fallou Diop</h3>
+                        <p>Data Science cameroun</p>
+                        <span class="speaker-tag">Data</span>
+                    </article>
+
+                    <article class="speakers-card" data-category="ia-tech">
+                        <img src="images/istockphoto-2099408907-612x612.webp" alt="">
+                        <h3>Emily Gomis</h3>
+                        <p>HugoConsulting Manager .Rwanda</p>
+                        <span class="speaker-tag">Business</span>
+                    </article>
+
+
+                    <article class="speakers-card" data-category="ia-tech">
+                        <img src="images/istockphoto-2099408907-612x612.webp" alt="">
+                        <h3>Brahim Diaz</h3>
+                        <p>Ingenieur Machine .Maroc</p>
+                        <span class="speaker-tag">IA ;tech</span>
+                    </article>
+                    
+
+                    
+
+                </div>
+            </div>
+
+        </section>
     </main>
 
-    <footer></footer>
+    <!--Footer-->
+
+    
+<footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <p class="Logo">AfriConnect<span>Summit</span></p>
+                <p>Le sommet tech qui cpnnect l afrique</p>
+
+
+            </div>
+        </div>
+        <div>
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Acceuil</a></li>
+                 <li><a href="programme.html">Programme</a></li>
+                  <li><a href="intervenants.html">Intervenants</a></li>
+                   <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </div>
+        <div>
+            <h4>Suivez-nous</h4>
+            <div class="socials">
+                <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                 <a href="#" aria-label="Linkedin"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+
+        <p class="copyright">&copy <span id="year"></span>AfriConnect Summit</p>
+
+    
+
+    <!--Bouton retour en haut-->
+    <button id="backToTop" aria-label="Retour en haut">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    </footer>
 
     <!--JavaScript-->
     <script src="js/main.js"></script>

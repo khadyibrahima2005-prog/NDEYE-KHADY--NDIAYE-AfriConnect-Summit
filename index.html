@@ -6,20 +6,236 @@
  <title>AfriConnect Summit — Accueil</title>
 
  <!--CSS-->
- <link rel="stylesheet"href="css/stylesheet">
+ <link rel="stylesheet"href="css/style.css">
 </head>
 
 <body>
-    <header></header>
+    <header class="navbar"id="navbar">
+        <div class="container navbar-inner">
+
+            <a href="index.html"class="logo">AfriConnect <span>Summit</span></a>
+
     
-    <nav></nav>
+    <nav class="nav-links" id="navlinks">
+
+        <a href="index.html" class="active">Accueil</a>
+          <a href="programme.html" >programme</a>
+            <a href="intervenants.html">Intervenants</a>
+              <a href="contact.html">Contact</a>
+
+    </nav>
+    <div class="nav-buttons">
+        <!--Bouton dark/light mode-->
+        <button id="themeBtn" aria-label="changer de theme">
+            <i class="bi bi-moon-stars"></i>
+        </button>
+        <!--Bouton menu mobile(humburger)-->
+        <button id="themeBtn" aria-label="ouvrir le menu">
+             <i class="bi bi-list"></i>
+        </button>
+
+
+    </div>
+    </div>
+    </header>
 
     <main>
-        <section></section>
-        <section></section>
+        <!--SECTION HERO-->
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <h1>
+                        Le sommet tech qui connect l afrique
+                    </h1>
+                    <p class="hero-desc">
+                        Develloppeurs,entrepreneurs,investisseurs de tout le continent
+                        se retrouve 3jours pour construire l avenir numerique africain.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="contact.html"class="bnt btn-primary">S inscrire</a>
+                        <a href="programme.html"class="bnt btn-ghost">Voici le programme</a>
+                    </div>
+                    
+                </div>
+                <!--compte a rebours-->
+                <div class="countdown-box" aria-label="Compte a rebours avant la conference">
+                    <p class="countdown-title"><i class="bi bi-airplane"></i>Embarquement pour Kigali</p>
+                    <div class="countdown"id="countdown">
+                        <div class="flap"><span id="days">00</span><small>Jours</small></div>
+                        <div class="flap"><span id="hours">00</span><small>Heures</small></div>
+                        <div class="flap"><span id="minutes">00</span><small>Minutes</small></div>
+                        <div class="flap"><span id="secondes">00</span><small>Secondes</small></div>
+
+                        
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!--chifrres cles (grid)-->
+        <section class="stats">
+            <div class="container stats-grid">
+                <article class="stat">
+                    <span class="stat-number" data-target="1200">0</span>
+                    <p>Participants</p>
+                </article>
+
+                <article class="stat">
+                    <span class="stat-number" data-target="48">0</span>
+                    <p>Intervenants</p>
+                </article>
+
+                <article class="stat">
+                    <span class="stat-number" data-target="48">0</span>
+                    <p>Intervenants</p>
+                </article>
+
+                <article class="stat">
+                    <span class="stat-number" data-target="3">0</span>
+                    <p>Jours</p>
+                </article>
+
+                <article class="stat">
+                    <span class="stat-number" data-target="12">0</span>
+                    <p>Pays representes</p>
+                </article>
+                
+            </div>
+
+        </section>
+
+        <!--Section Pourquoi Participer(Flexbox)-->
+        <section class="why">
+            <div class="container">
+                <h2>Pourquoi participer ?</h2>
+                <div class="why-grid">
+                    <article class="why card">
+                        <i class="bi bi-globe2"></i>
+                        <h3>Reseautage panafricain</h3>
+                        <p>Rencontrez des acteurs de 12 pays africains differents.</p>
+                    </article>
+
+                    <article class="why card">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <h3>Acces au investisseurs</h3>
+                        <p>Presentez votre projet a des investisseurs actifs sur le continent.</p>
+                    </article>
+
+                    <article class="why card">
+                        <i class="bi bi-tools"></i>
+                        <h3>Ateliers pratiques</h3>
+                        <p>Des sessions concretes animes par des experts du secteur.</p>
+                    </article>
+                </div>
+            </div>
+
+        </section>
+
+        <!--Section Intervenants Vedsttes-->
+        <section class="speakers">
+            <div class="container">
+                <h2>Intervenants Vedettes</h2>
+
+                <div class="speakers-grid">
+                    <article class="speaker-card">
+                        <img src="images/istockphoto.jpg" alt="">
+                        <h3>Aita Ndoye</h3>
+                        <p>CEO AitaConsulting . Senegal</p>
+
+                    </article>
+
+                    <article class="speaker-card">
+                        <img src="images/istockphoto-1653368202-612x612.webp" alt="">
+                        <h3>Rosalia Mendy</h3>
+                        <p>Directeur IA . Cote d'Ivoire</p>
+
+                    </article>
+
+                    <article class="speaker-card">
+                        <img src="images/istockphoto-2099408907-612x612.webp" alt="">
+                        <h3>Jules Cesar</h3>
+                        <p>Investisseur . Ghana</p>
+
+                    </article>
+
+                    <article class="speaker-card">
+                        <img src="images/istockphoto-2200638451-612x612.webp" alt="">
+                        <h3>Hugo</h3>
+                        <p>Fondateur HugoConsulting . Niger</p>
+
+                    </article>
+
+                </div>
+                <p class="see-more"><a href="intervenants.html">Voir tous les intervenants</a></p>
+            </div>
+        </section>
+
+        <!--Section Sponsors-->
+        <section class="sponsors">
+            <div class="container">
+                <h2>Nos sponsors</h2>
+
+                <p class="tier-label">0r</p>
+                <div class="sponsors-row tier-or">
+                    <span>Continental Bank</span>
+                     <span>Zenith Capital</span>
+                </div>
+
+                <p class="tier-label">Argent</p>
+                <div class="sponsors-row tier-or">
+                    <span>Atlas Cloud</span>
+                    <span>Meridian Data</span>
+                </div>
+
+                <p class="tier-label">Bronze</p>
+                <div class="sponsors-row tier-or">
+                    <span>Boma Systems</span>
+                    <span>Big System</span>
+                </div>
+
+
+            </div>
+        </section>
     </main>
 
-    <footer></footer>
+    <!--Footer-->
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <p class="Logo">AfriConnect<span>Summit</span></p>
+                <p>Le sommet tech qui cpnnect l afrique</p>
+
+
+            </div>
+        </div>
+        <div>
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Acceuil</a></li>
+                 <li><a href="programme.html">Programme</a></li>
+                  <li><a href="intervenants.html">Intervenants</a></li>
+                   <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </div>
+        <div>
+            <h4>Suivez-nous</h4>
+            <div class="socials">
+                <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                 <a href="#" aria-label="Linkedin"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+
+        <p class="copyright">&copy <span id="year"></span>AfriConnect Summit</p>
+
+    </footer>
+
+    <!--Bouton retour en haut-->
+    <button id="backToTop" aria-label="Retour en haut">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
     <!--JavaScript-->
     <script src="js/main.js"></script>
