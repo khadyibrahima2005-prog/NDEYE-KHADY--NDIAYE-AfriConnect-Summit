@@ -56,16 +56,57 @@ window.addEventListener("scroll", function () {
 });
 
 
-/* ----------------------------------------------------------
-   4. MENU HAMBURGER (mobile)
-   ---------------------------------------------------------- */
-var menuBtn = document.getElementById("menuBtn");
-var navLinks = document.getElementById("navLinks");
+/* --------------------------------------------------------------
+4.MENEU HAMBURGER (mobile)
+-----------------------------------------------------------------*/
+var menuBtn=document.getElementById("menuBtn");
+var navLinks=document.getElementById("navLinks");
 
-if (menuBtn && navLinks) {
-  menuBtn.addEventListener("click", function () {
-    navLinks.classList.toggle("open");
-  });
+if(menuBtn && navLinks){
+    menuBtn.addEventListener("click",function(){
+        navLinks.classList.toggle("open");
+
+    });
 }
 
+/* ----------------------------------------------------------
+   5. COMPTE A REBOURS
+   (seulement present sur la page index.html)
+   ---------------------------------------------------------- */
+var joursEl = document.getElementById("days");
 
+if (joursEl) {
+
+  // Date fictive de la conference : 12 novembre 2026 a 9h
+  var dateCible = new Date("2026-11-12T09:00:00").getTime();
+
+  function afficherCompteARebours() {
+    var maintenant = new Date().getTime();
+    var tempsRestant = dateCible - maintenant;
+
+    if (tempsRestant < 0) {
+      tempsRestant = 0;
+    }
+
+    var jours = Math.floor(tempsRestant / (1000 * 60 * 60 * 24));
+    var heures = Math.floor((tempsRestant / (1000 * 60 * 60)) % 24);
+    var minutes = Math.floor((tempsRestant / (1000 * 60)) % 60);
+    var secondes = Math.floor((tempsRestant / 1000) % 60);
+
+    // On ajoute un zero devant si le nombre est inferieur a 10
+    joursEl.textContent = ajouterZero(jours);
+    document.getElementById("hours").textContent = ajouterZero(heures);
+    document.getElementById("minutes").textContent = ajouterZero(minutes);
+    document.getElementById("seconds").textContent = ajouterZero(secondes);
+  }
+
+  function ajouterZero(nombre) {
+    if (nombre < 10) {
+      return "0" + nombre;
+    }
+    return "" + nombre;
+  }
+
+  afficherCompteARebours();                     // on affiche tout de suite
+  setInterval(afficherCompteARebours, 1000);     // puis toutes les secondes
+}
