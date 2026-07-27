@@ -186,3 +186,170 @@ if (backToTop) {
   });
 }
 
+/* ----------------------------------------------------------
+   9. ONGLETS DU PROGRAMME
+   
+   ---------------------------------------------------------- */
+var boutonsOnglets = document.querySelectorAll(".tab-btn");
+var panneauxJours = document.querySelectorAll(".day-panel");
+
+for (var i = 0; i < boutonsOnglets.length; i++) {
+
+  boutonsOnglets[i].addEventListener("click", function () {
+
+    // On enleve "active" de tous les boutons
+    for (var j = 0; j < boutonsOnglets.length; j++) {
+      boutonsOnglets[j].classList.remove("active");
+    }
+    // On ajoute "active" seulement au bouton clique
+    this.classList.add("active");
+
+    var jourChoisi = this.getAttribute("data-day");
+
+    // On affiche seulement le panneau du jour choisi
+    for (var k = 0; k < panneauxJours.length; k++) {
+      if (panneauxJours[k].getAttribute("data-day") === jourChoisi) {
+        panneauxJours[k].classList.add("active");
+      } else {
+        panneauxJours[k].classList.remove("active");
+      }
+    }
+  });
+}
+
+
+/* ----------------------------------------------------------
+   10. FILTRAGE DES INTERVENANTS
+   
+   ---------------------------------------------------------- */
+var boutonsFiltre = document.querySelectorAll(".filter-btn");
+var cartesIntervenants = document.querySelectorAll(".speaker-card");
+
+for (var i = 0; i < boutonsFiltre.length; i++) {
+
+  boutonsFiltre[i].addEventListener("click", function () {
+
+    // On enleve "active" de tous les boutons de filtre
+    for (var j = 0; j < boutonsFiltre.length; j++) {
+      boutonsFiltre[j].classList.remove("active");
+    }
+    this.classList.add("active");
+
+    var categorieChoisie = this.getAttribute("data-filter");
+
+    // On montre ou on cache chaque carte selon la categorie
+    for (var k = 0; k < cartesIntervenants.length; k++) {
+      var carte = cartesIntervenants[k];
+      var categorieCarte = carte.getAttribute("data-category");
+
+      if (categorieChoisie === "tous" || categorieChoisie === categorieCarte) {
+        carte.style.display = "block";
+      } else {
+        carte.style.display = "none";
+      }
+    }
+  });
+}
+
+
+/* ----------------------------------------------------------
+   11. VALIDATION DU FORMULAIRE DE CONTACT
+   
+   ---------------------------------------------------------- */
+var formulaireContact = document.getElementById("contactForm");
+
+if (formulaireContact) {
+
+  formulaireContact.addEventListener("submit", function (evenement) {
+    evenement.preventDefault(); // empeche la page de se recharger
+
+    var nom = document.getElementById("name");
+    var email = document.getElementById("email");
+    var telephone = document.getElementById("phone");
+    var participation = document.getElementById("participation");
+    var pays = document.getElementById("country");
+    var message = document.getElementById("message");
+
+    var formulaireValide = true;
+
+    // --- Verification du nom ---
+    if (nom.value.trim().length === 0) {
+      afficherErreur(nom, "Merci d'indiquer votre nom complet.");
+      formulaireValide = false;
+    } else {
+      afficherSucces(nom);
+    }
+
+    // --- Verification de l'email (doit contenir @ et un point) ---
+    var emailValide = email.value.includes("@") && email.value.includes(".");
+    if (!emailValide) {
+      afficherErreur(email, "Merci d'indiquer un email valide.");
+      formulaireValide = false;
+    } else {
+      afficherSucces(email);
+    }
+
+    // --- Verification du telephone (au moins 8 chiffres) ---
+    var chiffresTelephone = telephone.value.replace(/[^0-9]/g, "");
+    if (chiffresTelephone.length < 8) {
+      afficherErreur(telephone, "Le numero doit contenir au moins 8 chiffres.");
+      formulaireValide = false;
+    } else {
+      afficherSucces(telephone);
+    }
+
+    // --- Verification du type de participation ---
+    if (participation.value === "") {
+      afficherErreur(participation, "Merci de choisir un type de participation.");
+      formulaireValide = false;
+    } else {
+      afficherSucces(participation);
+    }
+
+    // --- Verification du pays ---
+    if (pays.value === "") {
+      afficherErreur(pays, "Merci de choisir votre pays.");
+      formulaireValide = false;
+    } else {
+      afficherSucces(pays);
+    }
+
+    // --- Verification du message (au moins 20 caracteres) ---
+    if (message.value.trim().length < 20) {
+      afficherErreur(message, "Votre message doit contenir au moins 20 caracteres.");
+      formulaireValide = false;
+    } else {
+      afficherSucces(message);
+    }
+
+    // --- Si tout est correct, on affiche le succes et on vide le formulaire ---
+    var messageSucces = document.getElementById("successMessage");
+
+    if (formulaireValide) {
+      messageSucces.classList.add("show");
+      formulaireContact.reset();
+    } else {
+      messageSucces.classList.remove("show");
+    }
+  });
+}
+
+// Affiche une bordure rouge et un message d'erreur sous le champ
+function afficherErreur(champ, texteErreur) {
+  var groupe = champ.parentElement; // le div.form-group qui contient le champ
+  champ.classList.add("invalid");
+  champ.classList.remove("valid");
+  groupe.classList.add("has-error");
+
+  var zoneErreur = groupe.querySelector(".error-message");
+  zoneErreur.textContent = texteErreur;
+}
+
+// Affiche une bordure verte quand le champ est correct
+function afficherSucces(champ) {
+  var groupe = champ.parentElement;
+  champ.classList.add("valid");
+  champ.classList.remove("invalid");
+  groupe.classList.remove("has-error");
+}
+
