@@ -110,3 +110,79 @@ if (joursEl) {
   afficherCompteARebours();                     // on affiche tout de suite
   setInterval(afficherCompteARebours, 1000);     // puis toutes les secondes
 }
+/* ----------------------------------------------------------
+   6. COMPTEURS ANIMES AU SCROLL (chiffres cles)
+   ---------------------------------------------------------- */
+var chiffresACompter = document.querySelectorAll(".stat-number");
+
+function lancerAnimationChiffre(element) {
+  var valeurFinale = parseInt(element.getAttribute("data-target"));
+  var valeurActuelle = 0;
+  var pas = Math.ceil(valeurFinale / 50); // le nombre augmente en 50 petites etapes
+
+  var intervalle = setInterval(function () {
+    valeurActuelle = valeurActuelle + pas;
+
+    if (valeurActuelle >= valeurFinale) {
+      valeurActuelle = valeurFinale;
+      clearInterval(intervalle);
+    }
+
+    element.textContent = valeurActuelle;
+  }, 30);
+}
+
+// IntersectionObserver permet de savoir quand un element devient visible a l'ecran
+var observateurChiffres = new IntersectionObserver(function (elements) {
+  for (var i = 0; i < elements.length; i++) {
+    if (elements[i].isIntersecting) {
+      lancerAnimationChiffre(elements[i].target);
+      observateurChiffres.unobserve(elements[i].target); // une seule fois suffit
+    }
+  }
+});
+
+for (var i = 0; i < chiffresACompter.length; i++) {
+  observateurChiffres.observe(chiffresACompter[i]);
+}
+
+
+/* ----------------------------------------------------------
+   7. ANIMATION D'APPARITION AU SCROLL
+   (pour les elements avec la classe "reveal")
+   ---------------------------------------------------------- */
+var elementsAAnimer = document.querySelectorAll(".reveal");
+
+var observateurReveal = new IntersectionObserver(function (elements) {
+  for (var i = 0; i < elements.length; i++) {
+    if (elements[i].isIntersecting) {
+      elements[i].target.classList.add("is-visible");
+      observateurReveal.unobserve(elements[i].target);
+    }
+  }
+});
+
+for (var i = 0; i < elementsAAnimer.length; i++) {
+  observateurReveal.observe(elementsAAnimer[i]);
+}
+
+
+/* ----------------------------------------------------------
+   8. BOUTON RETOUR EN HAUT
+   ---------------------------------------------------------- */
+var backToTop = document.getElementById("backToTop");
+
+if (backToTop) {
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  });
+
+  backToTop.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
